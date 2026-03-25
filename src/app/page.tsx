@@ -63,7 +63,7 @@ export default function Home() {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
                 M<span className="text-ivory-light">O</span>s<span className="text-ivory-light">AI</span>ci<span className="text-ivory-light">S</span>M
               </h1>
-              <p className="mt-5 text-xl sm:text-2xl text-white/50 font-light leading-relaxed">
+              <p className="mt-5 text-xl sm:text-2xl text-white/70 font-light leading-relaxed">
                 Decoding Somatic Mosaicism
                 <br />
                 with <span className="text-ivory-light font-normal">AI</span> and <span className="text-ivory-light font-normal">Multi-Omics</span>
@@ -87,56 +87,40 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/join"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/10 text-white/60 font-medium text-sm rounded-xl hover:border-white/25 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/20 text-white/80 font-medium text-sm rounded-xl hover:border-white/40 hover:text-white transition-all duration-300"
                 >
                   Join Us
                 </Link>
               </div>
             </div>
 
-            {/* Right: Research preview cards — 5 cols */}
-            <div className="hidden lg:block lg:col-span-5">
-              <div className="space-y-3">
-                {/* Lab logo */}
-                <div className="flex justify-center mb-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${prefix}/logo.svg`}
-                    alt="MOsAIciSM Lab"
-                    className="w-72 opacity-[0.35]"
-                    style={{ filter: "brightness(0) invert(1)" }}
-                  />
+            {/* Right: Key highlights */}
+            <div className="hidden lg:flex lg:col-span-5 items-center justify-center">
+              <div className="w-full max-w-md space-y-8">
+                {/* Stats */}
+                <div className="flex justify-between text-center">
+                  {stats.map((stat) => (
+                    <div key={stat.label}>
+                      <p className="text-4xl font-bold text-white">{stat.value}</p>
+                      <p className="text-[11px] text-white/40 mt-1 uppercase tracking-widest font-medium">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
 
-                {researchAreas.map((item, i) => (
-                  <Link
-                    key={item.title}
-                    href={item.link}
-                    className="group flex items-center gap-4 bg-white/[0.06] backdrop-blur-sm border border-white/[0.06] rounded-xl px-5 py-4 hover:bg-white/[0.1] hover:border-white/[0.12] transition-all duration-300"
-                  >
-                    <span className="text-[11px] font-bold text-white/20 tracking-widest w-6 shrink-0">0{i + 1}</span>
-                    <div className="w-9 h-9 bg-white/[0.08] rounded-lg flex items-center justify-center shrink-0 group-hover:bg-ivory/20 transition-colors">
-                      <svg className="w-4 h-4 text-white/50 group-hover:text-ivory-light transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                      </svg>
-                    </div>
-                    <div className="min-w-0">
-                      <h3 className="text-sm font-semibold text-white/90">{item.title}</h3>
-                      <p className="text-xs text-white/35 truncate">{item.desc}</p>
-                    </div>
-                    <svg className="w-4 h-4 text-white/20 group-hover:text-white/50 shrink-0 ml-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                ))}
+                <div className="h-px bg-white/10" />
 
-                {/* Stats row */}
-                <div className="grid grid-cols-3 gap-2 mt-4">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="bg-white/[0.04] border border-white/[0.05] rounded-xl px-4 py-3 text-center">
-                      <p className="text-xl font-bold text-white">{stat.value}</p>
-                      <p className="text-[10px] text-white/35 mt-0.5 uppercase tracking-wider font-medium">{stat.label}</p>
-                    </div>
+                {/* Research links */}
+                <div className="space-y-4">
+                  {researchAreas.map((item, i) => (
+                    <Link
+                      key={item.title}
+                      href={item.link}
+                      className="group flex items-center gap-4 hover:translate-x-1 transition-transform duration-200"
+                    >
+                      <span className="text-xs font-mono text-white/20">0{i + 1}</span>
+                      <div className="h-px w-6 bg-white/15 group-hover:bg-ivory-light group-hover:w-10 transition-all duration-200" />
+                      <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors">{item.title}</span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -177,32 +161,6 @@ export default function Home() {
           </div>
           <div className="lg:col-span-2">
             <div className="sticky top-24 space-y-3">
-              <div className="group bg-white rounded-xl border border-border p-5 hover:border-crimson/20 hover:shadow-md transition-all">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-crimson/10 text-crimson rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">31</p>
-                    <p className="text-xs text-muted">Peer-reviewed Publications</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group bg-white rounded-xl border border-border p-5 hover:border-crimson/20 hover:shadow-md transition-all">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-crimson/10 text-crimson rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">2024</p>
-                    <p className="text-xs text-muted">Lab Established at KU</p>
-                  </div>
-                </div>
-              </div>
               {/* KU affiliation */}
               <div className="bg-crimson-50 rounded-xl border border-crimson-100 p-5">
                 <div className="flex items-center gap-4">
@@ -214,8 +172,16 @@ export default function Home() {
                   />
                   <div>
                     <p className="text-sm font-semibold text-crimson">Korea University</p>
-                    <p className="text-xs text-muted">College of Health Science</p>
+                    <p className="text-xs text-muted">School of Biosystems and Biomedical Sciences</p>
                   </div>
+                </div>
+              </div>
+              <div className="group bg-white rounded-xl border border-border p-5 hover:border-crimson/20 hover:shadow-md transition-all">
+                <p className="text-xs text-muted uppercase tracking-wider font-medium mb-2">Keywords</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Somatic Mutation", "Mosaicism", "WGS", "Multi-Omics", "Foundation Model", "Single-Cell"].map((tag) => (
+                    <span key={tag} className="text-xs bg-crimson/5 text-crimson/80 px-2.5 py-1 rounded-full">{tag}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -273,17 +239,25 @@ export default function Home() {
       {/* News */}
       <PageSection title="News">
         <div className="space-y-0">
-          {newsItems.map((item, i) => (
+          {newsItems.slice(0, 5).map((item, i) => (
             <div
               key={i}
-              className="group flex gap-6 items-baseline py-4 border-b border-border last:border-0 hover:bg-warm/50 -mx-4 px-4 rounded-lg transition-colors"
+              className="group flex flex-col sm:flex-row gap-1 sm:gap-6 items-start sm:items-baseline py-4 border-b border-border last:border-0 hover:bg-warm/50 -mx-4 px-4 rounded-lg transition-colors"
             >
-              <span className="text-sm font-semibold text-crimson whitespace-nowrap min-w-[150px]">
+              <span className="text-sm font-semibold text-crimson whitespace-nowrap sm:min-w-[150px]">
                 {item.date}
               </span>
               <span className="text-muted group-hover:text-foreground transition-colors">{item.text}</span>
             </div>
           ))}
+        </div>
+        <div className="mt-6">
+          <Link href="/event" className="text-sm text-crimson font-medium hover:underline inline-flex items-center gap-1">
+            View all news &amp; events
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </PageSection>
     </>

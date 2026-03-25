@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import PageSection from "@/components/PageSection";
 
 export const metadata: Metadata = {
-  title: "Publication",
+  title: "Publications",
 };
 
-const publications = [
+interface Publication {
+  authors: string;
+  title: string;
+  journal: string;
+  year: number;
+  detail: string;
+  highlight?: boolean;
+}
+
+const publications: Publication[] = [
   {
     authors: 'Jang Y, Tomasini L, Bae T, Szekely A, Vaccarino FM, Abyzov A.',
     title: 'Transgenerational transmission of post-zygotic mutations suggests symmetric contribution of first two blastomeres to human germline.',
@@ -228,44 +237,85 @@ const publications = [
   },
 ];
 
+function boldPI(authors: string): React.ReactNode {
+  const parts = authors.split(/(Bae T[J\-]*\*?)/);
+  return parts.map((part, i) =>
+    /^Bae T/.test(part) ? (
+      <strong key={i} className="text-crimson font-semibold">{part}</strong>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
+
+// Group publications by year
+const years = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a);
+
 export default function PublicationPage() {
   return (
     <>
       <section className="bg-crimson relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-1/2 -right-1/4 w-2/3 h-full bg-gradient-to-l from-white/20 to-transparent rounded-full blur-3xl" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.06]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-crimson-100 text-sm font-medium uppercase tracking-widest mb-3">Our Work</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Publication</h1>
+          <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-3">Our Work</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Publications</h1>
           <p className="mt-3 text-white/70">{publications.length} peer-reviewed publications</p>
         </div>
       </section>
 
-      <PageSection title="Publications">
-        <div className="space-y-4">
-          {publications.map((pub, i) => (
-            <div
-              key={i}
-              className={`rounded-xl border p-5 transition-all duration-200 hover:shadow-md ${
-                pub.highlight
-                  ? "border-crimson/30 bg-crimson-50 hover:border-crimson/50"
-                  : "border-border bg-white hover:border-crimson/20"
-              }`}
+      {/* Year quick-nav */}
+      <div className="sticky top-16 z-40 bg-white/90 backdrop-blur-sm border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex gap-2 overflow-x-auto">
+          {years.map((year) => (
+            <a
+              key={year}
+              href={`#year-${year}`}
+              className="text-xs font-medium text-muted hover:text-crimson px-3 py-1 rounded-full hover:bg-crimson-50 transition-colors whitespace-nowrap"
             >
-              {pub.highlight && (
-                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-crimson bg-crimson/10 px-2 py-0.5 rounded mb-2">
-                  Key Publication
-                </span>
-              )}
-              <p className="font-semibold text-foreground leading-snug">{pub.title}</p>
-              <p className="text-sm text-muted mt-1.5">{pub.authors}</p>
-              <p className="text-sm mt-1">
-                <span className="font-medium text-crimson italic">{pub.journal}</span>
-                <span className="text-muted"> {pub.detail}</span>
-              </p>
-            </div>
+              {year}
+            </a>
           ))}
+        </div>
+      </div>
+
+      <PageSection title="Publications">
+        <div className="space-y-12">
+          {years.map((year) => {
+            const yearPubs = publications.filter((p) => p.year === year);
+            return (
+              <div key={year} id={`year-${year}`} className="scroll-mt-28">
+                <div className="flex items-center gap-3 mb-5">
+                  <h3 className="text-2xl font-bold text-foreground">{year}</h3>
+                  <span className="text-xs text-muted bg-surface px-2 py-0.5 rounded-full">{yearPubs.length}</span>
+                  <div className="flex-1 h-px bg-border" />
+                </div>
+                <div className="space-y-3">
+                  {yearPubs.map((pub, i) => (
+                    <div
+                      key={i}
+                      className={`rounded-xl border p-5 transition-all duration-200 hover:shadow-md ${
+                        pub.highlight
+                          ? "border-crimson/30 bg-crimson-50 hover:border-crimson/50"
+                          : "border-border bg-white hover:border-crimson/20"
+                      }`}
+                    >
+                      {pub.highlight && (
+                        <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-crimson bg-crimson/10 px-2 py-0.5 rounded mb-2">
+                          Key Publication
+                        </span>
+                      )}
+                      <p className="font-semibold text-foreground leading-snug">{pub.title}</p>
+                      <p className="text-sm text-muted mt-1.5">{boldPI(pub.authors)}</p>
+                      <p className="text-sm mt-1">
+                        <span className="font-medium text-crimson italic">{pub.journal}</span>
+                        <span className="text-muted"> {pub.detail}</span>
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </PageSection>
     </>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ObfuscatedEmail from "./ObfuscatedEmail";
 
 export default function Footer({ basePath = "" }: { basePath?: string }) {
   return (
@@ -38,8 +39,11 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
           </div>
           <div>
             <h3 className="font-semibold text-white text-sm uppercase tracking-wider mb-4">Contact</h3>
-            <p className="text-sm">Principal Investigator</p>
             <p className="text-white font-medium text-sm">Prof. Taejeong Bae</p>
+            <div className="text-sm mt-2 space-y-1">
+              <p>Tel: +82 2-3290-5648</p>
+              <p>Email: <ObfuscatedEmail user="tjbae" domain="korea.ac.kr" className="text-white/80" /></p>
+            </div>
           </div>
         </div>
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageSection from "@/components/PageSection";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -64,13 +65,7 @@ const researchAreas = [
 export default function ResearchPage() {
   return (
     <>
-      <section className="bg-crimson relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.08]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-3">What We Do</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Research</h1>
-        </div>
-      </section>
+      <PageBanner subtitle="What We Do" title="Research" />
 
       <PageSection title="Research Areas">
         <div className="space-y-16">
@@ -89,12 +84,12 @@ export default function ResearchPage() {
                 </div>
               </div>
 
-              <p className="text-muted leading-relaxed mb-6 ml-15 pl-0.5">
+              <p className="text-muted leading-relaxed mb-6 sm:ml-[3.75rem]">
                 {area.desc}
               </p>
 
               {/* Sub-items */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-15 pl-0.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:ml-[3.75rem]">
                 {area.items.map((item) => (
                   <div
                     key={item.label}

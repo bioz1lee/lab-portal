@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageSection from "@/components/PageSection";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Members",
@@ -8,15 +9,7 @@ export const metadata: Metadata = {
 export default function MembersPage() {
   return (
     <>
-      <section className="bg-crimson relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-1/2 -right-1/4 w-2/3 h-full bg-gradient-to-l from-white/20 to-transparent rounded-full blur-3xl" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-crimson-100 text-sm font-medium uppercase tracking-widest mb-3">Our Team</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Members</h1>
-        </div>
-      </section>
+      <PageBanner subtitle="Our Team" title="Members" />
 
       {/* PI */}
       <PageSection title="Principal Investigator">
