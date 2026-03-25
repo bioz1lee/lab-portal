@@ -21,6 +21,7 @@ const publications: Publication[] = [
     journal: 'Nat Commun',
     year: 2024,
     detail: '2024 Oct 23;15(1):9117.',
+    highlight: true,
   },
   {
     authors: 'Maury EA, Jones A, Seplyarskiy V, Nguyen TTL, Rosenbluh C, Bae T, et al.',
@@ -100,6 +101,7 @@ const publications: Publication[] = [
     journal: 'Science',
     year: 2021,
     detail: '2021 Mar 19;371(6535):1245-1248.',
+    highlight: true,
   },
   {
     authors: 'Bizzotto S, Dou Y, Ganz J, Doan RN, Kwon M, Bohrson CL, Kim SN, Bae T, Abyzov A, NIMH Brain Somatic Mosaicism Network, Park PJ, Walsh CA.',
@@ -262,6 +264,38 @@ export default function PublicationPage() {
           <p className="mt-3 text-white/70">{publications.length} peer-reviewed publications</p>
         </div>
       </section>
+
+      {/* Selected Publications */}
+      <PageSection title="Selected Publications">
+        <div className="space-y-3">
+          {publications.filter((p) => p.highlight).map((pub, i) => (
+            <div
+              key={i}
+              className="rounded-xl border border-crimson/20 bg-crimson-50 p-5 hover:shadow-md hover:border-crimson/40 transition-all duration-200"
+            >
+              <p className="font-semibold text-foreground leading-snug">{pub.title}</p>
+              <p className="text-sm text-muted mt-1.5">{boldPI(pub.authors)}</p>
+              <div className="flex items-center gap-3 mt-1 flex-wrap">
+                <p className="text-sm">
+                  <span className="font-medium text-crimson italic">{pub.journal}</span>
+                  <span className="text-muted"> {pub.detail}</span>
+                </p>
+                <a
+                  href={`https://scholar.google.com/scholar?q=${encodeURIComponent(pub.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-medium text-muted hover:text-crimson bg-white px-2 py-0.5 rounded-full border border-border hover:border-crimson/20 transition-colors"
+                >
+                  Google Scholar
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </PageSection>
 
       {/* Year quick-nav */}
       <div className="sticky top-16 z-40 bg-white/90 backdrop-blur-sm border-b border-border">
