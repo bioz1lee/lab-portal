@@ -26,7 +26,7 @@ const researchAreas = [
 
 const stats = [
   { value: "31", label: "Publications" },
-  { value: "3", label: "Research Pillars" },
+  { value: "3", label: "Research Areas" },
   { value: "2024", label: "Established" },
 ];
 
@@ -256,7 +256,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-10">
             <h2 className="text-2xl font-bold text-foreground flex items-center gap-3">
               <span className="w-1 h-8 bg-crimson rounded-full" />
-              Research Pillars
+              Research Areas
             </h2>
             <Link href="/research" className="text-sm text-crimson font-medium hover:underline hidden sm:inline-flex items-center gap-1">
               View all research
