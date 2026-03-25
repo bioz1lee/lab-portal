@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageSection from "@/components/PageSection";
+import prefix from "@/lib/prefix";
 
 const newsItems = [
   { date: "December, 2025", text: "Jaehyuk Jeon joined the lab as student intern. Welcome!" },
@@ -100,7 +101,7 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/logo.svg"
+                    src={`${prefix}/logo.svg`}
                     alt="MOsAIciSM Lab"
                     className="w-72 opacity-[0.35]"
                     style={{ filter: "brightness(0) invert(1)" }}
@@ -207,7 +208,7 @@ export default function Home() {
                 <div className="flex items-center gap-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/ku-logo-crimson.gif"
+                    src={`${prefix}/ku-logo-crimson.gif`}
                     alt="Korea University"
                     className="w-11 h-11 object-contain"
                   />

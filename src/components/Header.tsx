@@ -13,7 +13,7 @@ const navItems = [
   { href: "/event", label: "Event" },
 ];
 
-export default function Header() {
+export default function Header({ basePath = "" }: { basePath?: string }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="MOsAIciSM" className="h-8 text-white" style={{ filter: "brightness(0) invert(1)" }} />
+            <img src={`${basePath}/logo.svg`} alt="MOsAIciSM" className="h-8 text-white" style={{ filter: "brightness(0) invert(1)" }} />
           </Link>
 
           {/* Desktop nav */}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ basePath = "" }: { basePath?: string }) {
   return (
     <footer className="bg-crimson-dark text-white/60 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="MOsAIciSM" className="h-7" style={{ filter: "brightness(0) invert(1)" }} />
+              <img src={`${basePath}/logo.svg`} alt="MOsAIciSM" className="h-7" style={{ filter: "brightness(0) invert(1)" }} />
             </div>
             <p className="text-sm leading-relaxed text-white/70 mb-2 italic">
               Decoding Somatic Mosaicism with AI and Multi-Omics
