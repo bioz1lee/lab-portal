@@ -118,7 +118,7 @@ export default function MembersPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <MemberCard
             name="Ina Jeon"
-            role="Incoming Master's Student"
+            role="Postbac Researcher"
             details="2023 B.S. in Biosystem and Biomedical Science, Korea University"
           />
           <MemberCard
