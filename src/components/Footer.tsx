@@ -19,7 +19,7 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
               <br />
               College of Health Science, Korea University
               <br />
-              하나과학관 B동 569A호
+              Hana Science Hall B, Room 569A
             </p>
           </div>
           <div>
@@ -45,7 +45,7 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
             <div className="text-sm mt-2 space-y-1">
               <p>Tel: +82 2-3290-5648</p>
               <p>Email: <ObfuscatedEmail user="tjbae" domain="korea.ac.kr" className="text-white/80" /></p>
-              <p>Office: 하나과학관 B동 569A호</p>
+              <p>Office: Hana Science Hall B, Room 569A</p>
             </div>
             <div className="flex gap-3 mt-3">
               <a href="https://scholar.google.com/citations?user=dvwtc1kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-xs text-white/50 hover:text-white transition-colors">Google Scholar</a>

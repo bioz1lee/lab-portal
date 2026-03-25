@@ -9,7 +9,6 @@ The MOsAIciSM Lab is a genomic analysis laboratory led by Prof. Taejeong Bae at 
 - Name: Taejeong Bae
 - Title: Associate Professor, Korea University
 - Google Scholar: https://scholar.google.com/citations?user=dvwtc1kAAAAJ&hl=en
-- Email: tjbae [at] korea.ac.kr
 - Phone: +82 2-3290-5648
 - Office: Hana Science Hall B, Room 569A
 
