@@ -24,6 +24,18 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+/* Responsive base font size */
+@media (min-width: 640px) {
+  body { font-size: 16px; }
+}
+@media (min-width: 1024px) {
+  body { font-size: 17px; }
+}
+@media (min-width: 1280px) {
+  body { font-size: 18px; }
 }
 
 html {
