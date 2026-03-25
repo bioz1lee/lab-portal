@@ -48,39 +48,77 @@ export default function Home() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.06]" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/[0.07] to-transparent" />
-          {/* Abstract mosaic grid */}
-          <svg className="absolute right-0 top-0 h-full w-1/2 opacity-[0.04]" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Vertical helix-like curves */}
-            <path d="M200 0 Q260 75 200 150 Q140 225 200 300 Q260 375 200 450 Q140 525 200 600" stroke="white" strokeWidth="1.5" />
-            <path d="M240 0 Q180 75 240 150 Q300 225 240 300 Q180 375 240 450 Q300 525 240 600" stroke="white" strokeWidth="1" />
-            {/* Horizontal connection lines */}
-            <line x1="200" y1="75" x2="240" y2="75" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="150" x2="240" y2="150" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="225" x2="240" y2="225" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="300" x2="240" y2="300" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="375" x2="240" y2="375" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="450" x2="240" y2="450" stroke="white" strokeWidth="0.8" />
-            <line x1="200" y1="525" x2="240" y2="525" stroke="white" strokeWidth="0.8" />
-            {/* Mosaic tiles scattered */}
-            <rect x="80" y="100" width="24" height="24" rx="4" stroke="white" strokeWidth="0.5" opacity="0.6" />
-            <rect x="320" y="180" width="18" height="18" rx="3" stroke="white" strokeWidth="0.5" opacity="0.4" />
-            <rect x="60" y="300" width="16" height="16" rx="3" stroke="white" strokeWidth="0.5" opacity="0.5" />
-            <rect x="340" y="400" width="22" height="22" rx="4" stroke="white" strokeWidth="0.5" opacity="0.3" />
-            <rect x="100" y="480" width="20" height="20" rx="3" stroke="white" strokeWidth="0.5" opacity="0.4" />
-            {/* Data nodes */}
-            <circle cx="200" cy="75" r="3" fill="white" opacity="0.6" />
-            <circle cx="240" cy="150" r="2.5" fill="white" opacity="0.5" />
-            <circle cx="200" cy="300" r="3.5" fill="white" opacity="0.7" />
-            <circle cx="240" cy="375" r="2" fill="white" opacity="0.4" />
-            <circle cx="200" cy="525" r="3" fill="white" opacity="0.5" />
-            {/* Scattered dots — genomic data feel */}
-            <circle cx="120" cy="50" r="1.5" fill="white" opacity="0.3" />
-            <circle cx="310" cy="120" r="1" fill="white" opacity="0.25" />
-            <circle cx="150" cy="200" r="1.5" fill="white" opacity="0.2" />
-            <circle cx="350" cy="280" r="1" fill="white" opacity="0.3" />
-            <circle cx="90" cy="380" r="1.5" fill="white" opacity="0.2" />
-            <circle cx="280" cy="500" r="1" fill="white" opacity="0.25" />
-            <circle cx="160" cy="550" r="1.5" fill="white" opacity="0.3" />
+
+          {/* Large abstract graphic — right half */}
+          <svg className="absolute right-0 top-0 h-full w-3/5 opacity-[0.12]" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid slice">
+            {/* DNA double helix — two intertwining curves */}
+            <path d="M280 -20 Q360 80 280 180 Q200 280 280 380 Q360 480 280 580 Q200 680 280 780 Q360 880 280 960" stroke="white" strokeWidth="2" opacity="0.5" />
+            <path d="M340 -20 Q260 80 340 180 Q420 280 340 380 Q260 480 340 580 Q420 680 340 780 Q260 880 340 960" stroke="white" strokeWidth="1.5" opacity="0.35" />
+
+            {/* Rungs connecting the helix */}
+            <line x1="280" y1="80" x2="340" y2="80" stroke="white" strokeWidth="1" opacity="0.4" />
+            <line x1="280" y1="180" x2="340" y2="180" stroke="white" strokeWidth="1" opacity="0.5" />
+            <line x1="280" y1="280" x2="340" y2="280" stroke="white" strokeWidth="1" opacity="0.4" />
+            <line x1="280" y1="380" x2="340" y2="380" stroke="white" strokeWidth="1" opacity="0.5" />
+            <line x1="280" y1="480" x2="340" y2="480" stroke="white" strokeWidth="1" opacity="0.4" />
+            <line x1="280" y1="580" x2="340" y2="580" stroke="white" strokeWidth="1" opacity="0.5" />
+            <line x1="280" y1="680" x2="340" y2="680" stroke="white" strokeWidth="1" opacity="0.4" />
+            <line x1="280" y1="780" x2="340" y2="780" stroke="white" strokeWidth="1" opacity="0.3" />
+
+            {/* Junction nodes */}
+            <circle cx="280" cy="80" r="4" fill="white" opacity="0.5" />
+            <circle cx="340" cy="180" r="5" fill="white" opacity="0.6" />
+            <circle cx="280" cy="280" r="3.5" fill="white" opacity="0.4" />
+            <circle cx="340" cy="380" r="5" fill="white" opacity="0.7" />
+            <circle cx="280" cy="480" r="4" fill="white" opacity="0.5" />
+            <circle cx="340" cy="580" r="3" fill="white" opacity="0.4" />
+            <circle cx="280" cy="680" r="4.5" fill="white" opacity="0.5" />
+            <circle cx="340" cy="780" r="3" fill="white" opacity="0.3" />
+
+            {/* Network connections branching from helix */}
+            <line x1="340" y1="180" x2="440" y2="140" stroke="white" strokeWidth="0.8" opacity="0.3" />
+            <line x1="440" y1="140" x2="510" y2="170" stroke="white" strokeWidth="0.6" opacity="0.2" />
+            <line x1="280" y1="280" x2="180" y2="240" stroke="white" strokeWidth="0.8" opacity="0.3" />
+            <line x1="180" y1="240" x2="120" y2="280" stroke="white" strokeWidth="0.6" opacity="0.2" />
+            <line x1="340" y1="380" x2="460" y2="350" stroke="white" strokeWidth="0.8" opacity="0.35" />
+            <line x1="460" y1="350" x2="530" y2="390" stroke="white" strokeWidth="0.6" opacity="0.2" />
+            <line x1="280" y1="480" x2="160" y2="460" stroke="white" strokeWidth="0.8" opacity="0.3" />
+            <line x1="340" y1="580" x2="450" y2="560" stroke="white" strokeWidth="0.8" opacity="0.25" />
+            <line x1="280" y1="680" x2="170" y2="710" stroke="white" strokeWidth="0.7" opacity="0.25" />
+
+            {/* Outer network nodes */}
+            <circle cx="440" cy="140" r="3" fill="white" opacity="0.35" />
+            <circle cx="510" cy="170" r="2" fill="white" opacity="0.2" />
+            <circle cx="180" cy="240" r="3" fill="white" opacity="0.3" />
+            <circle cx="120" cy="280" r="2" fill="white" opacity="0.2" />
+            <circle cx="460" cy="350" r="3.5" fill="white" opacity="0.35" />
+            <circle cx="530" cy="390" r="2" fill="white" opacity="0.2" />
+            <circle cx="160" cy="460" r="2.5" fill="white" opacity="0.25" />
+            <circle cx="450" cy="560" r="2.5" fill="white" opacity="0.25" />
+            <circle cx="170" cy="710" r="2.5" fill="white" opacity="0.2" />
+
+            {/* Mosaic tiles — scattered geometric shapes */}
+            <rect x="80" y="120" width="30" height="30" rx="5" stroke="white" strokeWidth="0.8" opacity="0.25" />
+            <rect x="470" y="240" width="24" height="24" rx="4" stroke="white" strokeWidth="0.8" opacity="0.2" />
+            <rect x="100" y="380" width="20" height="20" rx="3" stroke="white" strokeWidth="0.7" opacity="0.2" />
+            <rect x="500" y="480" width="28" height="28" rx="5" stroke="white" strokeWidth="0.8" opacity="0.2" />
+            <rect x="140" y="560" width="22" height="22" rx="4" stroke="white" strokeWidth="0.7" opacity="0.15" />
+            <rect x="480" y="640" width="18" height="18" rx="3" stroke="white" strokeWidth="0.7" opacity="0.15" />
+
+            {/* Filled accent tiles */}
+            <rect x="420" y="80" width="12" height="12" rx="2" fill="white" opacity="0.08" />
+            <rect x="130" y="320" width="14" height="14" rx="2" fill="white" opacity="0.06" />
+            <rect x="500" y="520" width="10" height="10" rx="2" fill="white" opacity="0.06" />
+
+            {/* Scattered micro dots — data points */}
+            <circle cx="100" cy="60" r="1.5" fill="white" opacity="0.2" />
+            <circle cx="520" cy="100" r="1.5" fill="white" opacity="0.15" />
+            <circle cx="60" cy="200" r="1" fill="white" opacity="0.15" />
+            <circle cx="550" cy="300" r="1.5" fill="white" opacity="0.15" />
+            <circle cx="80" cy="440" r="1" fill="white" opacity="0.12" />
+            <circle cx="560" cy="450" r="1" fill="white" opacity="0.12" />
+            <circle cx="90" cy="620" r="1.5" fill="white" opacity="0.12" />
+            <circle cx="540" cy="700" r="1" fill="white" opacity="0.1" />
           </svg>
         </div>
 

@@ -39,6 +39,7 @@ const publications: Publication[] = [
     journal: 'Sci Data',
     year: 2023,
     detail: '2023 Nov 20;10(1):813.',
+    pmid: '37985666',
   },
   {
     authors: 'Panda A, Suvakov M, Mariani J, Drucker KL, Park Y, Jang Y, Kollmeyer TM, Sarkar G, Bae T, et al.',
@@ -46,6 +47,7 @@ const publications: Publication[] = [
     journal: 'CRISPR J',
     year: 2023,
     detail: '2023 Apr;6(2):176-182.',
+    pmid: '37071670',
   },
   {
     authors: 'Jang Y, Fasching L, Bae T, Tomasini L, Schreiner J, Szekely A, Fernandez TV, Leckman JF, Vaccarino FM, Abyzov A.',
@@ -53,6 +55,7 @@ const publications: Publication[] = [
     journal: 'Nucleic Acids Res',
     year: 2023,
     detail: '2023 Apr 7:gkad254.',
+    pmid: '37026484',
   },
   {
     authors: 'Chung C, Yang X, Bae T, et al.',
@@ -60,6 +63,7 @@ const publications: Publication[] = [
     journal: 'Nat Genet',
     year: 2023,
     detail: '2023 Feb;55(2):209-220.',
+    pmid: '36635388',
   },
   {
     authors: 'Yang X, Xu X, Breuss MW, Antaki D, Ball LL, Chung C, Shen J, Li C, George RD, Wang Y, Bae T, Cheng Y, Abyzov A, Wei L, Alexandrov L, Sebat J, NIMH Brain Somatic Mosaicism Network, Gleeson JG.',
@@ -67,6 +71,7 @@ const publications: Publication[] = [
     journal: 'Nat Biotechnol',
     year: 2023,
     detail: '2023 Jan 2.',
+    pmid: '36593400',
   },
   {
     authors: 'Bae T, Wang Y, Vaccarino FM, Abyzov A.',
@@ -74,6 +79,7 @@ const publications: Publication[] = [
     journal: 'Clin Transl Med',
     year: 2022,
     detail: '2022 Dec;12(12):e1138.',
+    pmid: '36495113',
   },
   {
     authors: 'Bae T*, Fasching L*, Wang Y*, Shin JH*, et al.',
@@ -90,6 +96,7 @@ const publications: Publication[] = [
     journal: 'PLoS Comput Biol',
     year: 2022,
     detail: '2022 Apr 20;18(4):e1009487.',
+    pmid: '35442945',
   },
   {
     authors: 'Wang Y*, Bae T*, Thorpe J*, Sherman MA*, Jones AG*, et al.',
@@ -106,6 +113,7 @@ const publications: Publication[] = [
     journal: 'Science',
     year: 2021,
     detail: '2021 Mar 19;371(6535):1245-1248.',
+    pmid: '33737484',
   },
   {
     authors: 'Bizzotto S, Dou Y, Ganz J, Doan RN, Kwon M, Bohrson CL, Kim SN, Bae T, Abyzov A, NIMH Brain Somatic Mosaicism Network, Park PJ, Walsh CA.',
@@ -113,6 +121,7 @@ const publications: Publication[] = [
     journal: 'Science',
     year: 2021,
     detail: '2021 Mar 19;371(6535):1249-1253.',
+    pmid: '33737485',
   },
   {
     authors: 'Sekar S, Tomasini L, Proukakis C, Bae T, Manlove L, Jang Y, Scuderi S, Zhou B, Kalyva M, Amiri A, Mariani J, Sedlazeck FJ, Urban AE, Vaccarino FM, Abyzov A.',
@@ -120,6 +129,7 @@ const publications: Publication[] = [
     journal: 'Genome Res',
     year: 2020,
     detail: '2020 Dec 30;30(12):1695-1704.',
+    pmid: '33122304',
   },
   {
     authors: 'Sarangi V, Jourdon A, Bae T, Panda A, Vaccarino F, Abyzov A.',
@@ -127,6 +137,7 @@ const publications: Publication[] = [
     journal: 'BMC Bioinformatics',
     year: 2020,
     detail: '2020 Nov 12;21(1):521.',
+    pmid: '33183232',
   },
   {
     authors: 'Druliner BR, Wang P, Bae T, et al.',
@@ -134,6 +145,7 @@ const publications: Publication[] = [
     journal: 'Scientific Reports',
     year: 2018,
     detail: '2018 Feb 16;8(1):3161.',
+    pmid: '29453410',
   },
   {
     authors: 'Bae T, Tomasini L, Mariani J, Zhou B, Roychowdhury T, Franjic D, Pletikos M, Pattni R, Chen BJ, Venturini E, Riley-Gillis B, Sestan N, Urban AE, Abyzov A, Vaccarino FM.',
@@ -150,6 +162,7 @@ const publications: Publication[] = [
     journal: 'Oncotarget',
     year: 2017,
     detail: '2017 Dec 26;9(6):6780-6792.',
+    pmid: '29467928',
   },
   {
     authors: 'McConnell MJ, Moran JV, Abyzov A, Akbarian S, Bae T, et al.',
@@ -157,6 +170,7 @@ const publications: Publication[] = [
     journal: 'Science',
     year: 2017,
     detail: '2017 Apr 28;356(6336):395.',
+    pmid: '28450582',
   },
   {
     authors: 'Druliner BR, Rashtak S, Ruan X, Bae T, Vasmatzis N, O\'Brien D, Johnson R, Felmlee-Devine D, Washechek-Aletto J, Basu N, Liu H, Smyrk T, Abyzov A, Boardman LA.',
@@ -164,6 +178,7 @@ const publications: Publication[] = [
     journal: 'Transl Oncol',
     year: 2016,
     detail: '2016 Aug;9(4):280-6.',
+    pmid: '27567950',
   },
   {
     authors: 'Akbarian S, Liu C, Knowles JA, Vaccarino FM, Farnham PJ, Crawford GE, Jaffe AE, Pinto D, Dracheva S, Geschwind DH, Mill J, Nairn AC, Abyzov A, Pochareddy S, Prabhakar S, Weissman S, Sullivan PF, State MW, Weng Z, Peters MA, White KP, Gerstein MB, Amiri A, Armoskus C, Ashley-Koch AE, Bae T, et al.',
@@ -171,6 +186,7 @@ const publications: Publication[] = [
     journal: 'Nat Neurosci',
     year: 2015,
     detail: '2015 Dec;18(12):1707-12.',
+    pmid: '26605881',
   },
   {
     authors: 'Bae T*, Weon KY*, Lee JW, Eum KH, Kim S, Choi JW.',
@@ -178,6 +194,7 @@ const publications: Publication[] = [
     journal: 'Carcinogenesis',
     year: 2015,
     detail: '2015 Dec;36(12):1561-71.',
+    pmid: '26442525',
   },
   {
     authors: 'Kim YR, Park MS, Eum KH, Kim J, Lee JW, Bae T, Lee DH, Choi JW.',
@@ -185,6 +202,7 @@ const publications: Publication[] = [
     journal: 'Oncotarget',
     year: 2015,
     detail: '2015 Oct 13;6(31):31030-8.',
+    pmid: '26307679',
   },
   {
     authors: 'Sudmant PH, Rausch T, Gardner EJ, Handsaker RE, Abyzov A, Huddleston J, Zhang Y, Ye K, Jun G, Hsi-Yang Fritz M, Konkel MK, Malhotra A, Stutz AM, Shi X, Paolo Casale F, Chen J, Hormozdiari F, Dayama G, Chen K, Malig M, Chaisson MJ, Walter K, Meiers S, Kashin S, Garrison E, Auton A, Lam HY, Jasmine Mu X, Alkan C, Antaki D, Bae T, et al.',
@@ -192,6 +210,7 @@ const publications: Publication[] = [
     journal: 'Nature',
     year: 2015,
     detail: '2015 Oct 01;526(7571):75-81.',
+    pmid: '26432246',
   },
   {
     authors: 'Saito S, Zhou X, Bae T, Kim S, Horimoto K.',
@@ -199,6 +218,7 @@ const publications: Publication[] = [
     journal: 'Int J Data Min Bioinform',
     year: 2013,
     detail: '2013;8(3):366.',
+    pmid: '24417028',
   },
   {
     authors: 'Bae T*, Rho K*, Choi JW, Horimoto K, Kim W, Kim S.',
@@ -206,6 +226,7 @@ const publications: Publication[] = [
     journal: 'BMC Syst Biol',
     year: 2013,
     detail: '2013;7:86.',
+    pmid: '23977935',
   },
   {
     authors: 'Lee J-H, Kim DG, Bae TJ, et al.',
@@ -213,6 +234,7 @@ const publications: Publication[] = [
     journal: 'PloS One',
     year: 2012,
     detail: '2012;7(8):e42573.',
+    pmid: '22905152',
   },
   {
     authors: 'Lee HS*, Bae T*, Lee J-H*, et al.',
@@ -220,6 +242,7 @@ const publications: Publication[] = [
     journal: 'BMC Syst Biol',
     year: 2012,
     detail: '2012;6:80.',
+    pmid: '22748168',
   },
   {
     authors: 'Ahn TJ, Park K, Son DS, Huh N, Oh S, Bae T, et al.',
@@ -227,6 +250,7 @@ const publications: Publication[] = [
     journal: 'Int J Data Min Bioinform',
     year: 2012,
     detail: '2012;6(5):521.',
+    pmid: '23155780',
   },
   {
     authors: 'Rho K, Kim B, Jang Y, Lee S, Bae T, et al.',
@@ -234,6 +258,7 @@ const publications: Publication[] = [
     journal: 'BMC Bioinformatics',
     year: 2011,
     detail: '2011;12(Suppl 1):S25.',
+    pmid: '21342555',
   },
   {
     authors: 'Bae T-J*, Kim M-S*, Kim J-W*, et al.',
@@ -241,6 +266,7 @@ const publications: Publication[] = [
     journal: 'Proteomics',
     year: 2004,
     detail: '2004;4(11):3536-48.',
+    pmid: '15378739',
   },
 ];
 
