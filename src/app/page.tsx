@@ -216,22 +216,20 @@ export default function Home() {
       {/* About */}
       <PageSection title="About Our Lab">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-3 space-y-4 text-muted leading-relaxed">
-            <p>
-              The MOsAIciSM Lab focuses on studying the occurrence of genetic variants and their effects on functional phenotypic changes through large-scale genomic data analysis.
+          <div className="lg:col-span-3">
+            {/* Lead statement */}
+            <p className="text-xl font-medium text-foreground leading-relaxed mb-6">
+              We study how <strong className="text-crimson">somatic mutations</strong> shape human development, aging, and disease — by combining <strong className="text-crimson">large-scale genomic analysis</strong>, <strong className="text-crimson">multi-omics integration</strong>, and <strong className="text-crimson">AI-driven models</strong>.
             </p>
-            <p>
-              Specifically, we specialize in somatic mutations that accumulate during cell division and the resulting phenomenon of somatic mosaicism, where individual cell populations form unique genomic patterns.
-            </p>
-            <p>
-              Our lab develops experimental and analytical methodologies to detect somatic mosaicism from large-scale genomic sequencing data. Through mutational signature analysis of detected somatic mutations, we trace the origins of these variations.
-            </p>
-            <p>
-              Furthermore, we utilize mutational lineage analysis to explore early human developmental processes that are experimentally challenging to study. Additionally, we perform functional interpretation of somatic mutations by integrating diverse multi-omic datasets.
-            </p>
-            <p>
-              This allows us to investigate the impact of somatic mutations on human development, aging, and their associations with various diseases.
-            </p>
+
+            <div className="space-y-4 text-muted leading-relaxed">
+              <p>
+                Our lab specializes in somatic mosaicism — the phenomenon where individual cell populations accumulate unique mutations during cell division, forming distinct genomic patterns. We develop experimental and computational methodologies to <strong className="text-foreground">detect somatic mosaicism</strong> from single-cell and whole-genome sequencing data.
+              </p>
+              <p>
+                Through <strong className="text-foreground">mutational signature and lineage analysis</strong>, we trace the origins of these variations and explore early human developmental processes that are experimentally challenging to study. By integrating diverse multi-omic datasets, we perform <strong className="text-foreground">functional interpretation</strong> of somatic mutations and investigate their impact on human development, aging, and their associations with various diseases.
+              </p>
+            </div>
           </div>
           <div className="lg:col-span-2">
             <div className="sticky top-24 space-y-3">
