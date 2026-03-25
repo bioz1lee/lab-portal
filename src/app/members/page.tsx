@@ -92,22 +92,31 @@ export default function MembersPage() {
             <MemberCard
               name="Seoyeon Kim"
               role="Ph.D Student"
-              details="2025 M.S. in Life Science, Korea University / 2023 B.S. in Life Science, Korea University"
+              education={[
+                { degree: "M.S.", field: "Life Science", school: "Korea University", year: "2025" },
+                { degree: "B.S.", field: "Life Science", school: "Korea University", year: "2023" },
+              ]}
             />
             <MemberCard
               name="Minje Sung"
               role="MS-Ph.D Integrated"
-              details="2025 B.S. in Life Science, Kyung Hee University"
+              education={[
+                { degree: "B.S.", field: "Life Science", school: "Kyung Hee University", year: "2025" },
+              ]}
             />
             <MemberCard
               name="Yujin Kim"
               role="MS-Ph.D Integrated"
-              details="2026 B.S. in Life Science, Kyung Hee University"
+              education={[
+                { degree: "B.S.", field: "Life Science", school: "Kyung Hee University", year: "2026" },
+              ]}
             />
             <MemberCard
               name="Dongwon Yun"
               role="Master's Student"
-              details="2025 B.S. in Biological Engineering, Kangwon National University"
+              education={[
+                { degree: "B.S.", field: "Biological Engineering", school: "Kangwon National University", year: "2025" },
+              ]}
             />
           </div>
         </div>
@@ -119,17 +128,23 @@ export default function MembersPage() {
           <MemberCard
             name="Ina Jeon"
             role="Postbac Researcher"
-            details="2023 B.S. in Biosystem and Biomedical Science, Korea University"
+            education={[
+              { degree: "B.S.", field: "Biosystem and Biomedical Science", school: "Korea University", year: "2023" },
+            ]}
           />
           <MemberCard
             name="Jiwon Lee"
             role="Undergraduate Intern"
-            details="Biosystem and Biomedical Science, Korea University"
+            education={[
+              { field: "Biosystem and Biomedical Science", school: "Korea University" },
+            ]}
           />
           <MemberCard
             name="Jaehyuk Jeon"
             role="Undergraduate Intern"
-            details="Biosystem and Biomedical Science, Korea University"
+            education={[
+              { field: "Biosystem and Biomedical Science", school: "Korea University" },
+            ]}
           />
         </div>
       </PageSection>
@@ -145,7 +160,7 @@ export default function MembersPage() {
             <MemberCard
               name="Sungyoung Ahn"
               role="Administrative Assistant"
-              details="Joint appointment with Professor Jaewoong Lee, Kyuri Lee"
+              note="Joint appointment with Prof. Jaewoong Lee, Kyuri Lee"
             />
           </div>
         </div>
@@ -157,13 +172,13 @@ export default function MembersPage() {
           <MemberCard
             name="Younghoon Jung"
             role="Graduate Intern"
-            details="2025.03 ~ 2025.05"
+            note="2025.03 – 2025.05"
             alumni
           />
           <MemberCard
             name="EunJoo Shin"
             role="Administrative Assistant"
-            details="2025.04 ~ 2025.08"
+            note="2025.04 – 2025.08"
             alumni
           />
         </div>
@@ -172,15 +187,24 @@ export default function MembersPage() {
   );
 }
 
+interface Education {
+  degree?: string;
+  field: string;
+  school: string;
+  year?: string;
+}
+
 function MemberCard({
   name,
   role,
-  details,
+  education,
+  note,
   alumni = false,
 }: {
   name: string;
   role: string;
-  details: string;
+  education?: Education[];
+  note?: string;
   alumni?: boolean;
 }) {
   return (
@@ -198,7 +222,17 @@ function MemberCard({
       </div>
       <h3 className="font-semibold text-foreground">{name}</h3>
       <p className={`text-sm font-medium mt-0.5 ${alumni ? "text-muted" : "text-crimson"}`}>{role}</p>
-      <p className="text-xs text-muted mt-2 leading-relaxed">{details}</p>
+      {education && (
+        <ul className="mt-3 space-y-1.5">
+          {education.map((edu, i) => (
+            <li key={i} className="text-xs text-muted flex gap-2">
+              {edu.year && <span className="font-semibold text-foreground/70 shrink-0">{edu.year}</span>}
+              <span>{edu.degree ? `${edu.degree} in ` : ""}{edu.field}, {edu.school}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {note && <p className="text-xs text-muted mt-3 italic">{note}</p>}
     </div>
   );
 }
