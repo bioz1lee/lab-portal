@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "ResearchOrganization",
               name: "MOsAIciSM Lab",
               alternateName: "Genomic Analysis Laboratory",
-              url: "https://bioz1lee.github.io/lab-portal/",
+              url: "https://baelab.org/",
               description: "Decoding Somatic Mosaicism with AI and Multi-Omics at Korea University",
               parentOrganization: {
                 "@type": "CollegeOrUniversity",

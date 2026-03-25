@@ -1,2 +1,2 @@
-const prefix = process.env.NODE_ENV === "production" ? "/lab-portal" : "";
+const prefix = "";
 export default prefix;

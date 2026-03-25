@@ -30,7 +30,7 @@ Total: 31 peer-reviewed publications.
 Korea University, Hana Science Hall B, Room 569A, Seoul, South Korea
 
 ## Website
-https://bioz1lee.github.io/lab-portal/
+https://baelab.org/
 
 ## Joining the Lab
 The lab accepts undergraduate interns, master's, and Ph.D. students. Contact Prof. Bae via email.
