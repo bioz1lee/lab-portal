@@ -12,6 +12,8 @@ interface Publication {
   year: number;
   detail: string;
   highlight?: boolean;
+  doi?: string;
+  pmid?: string;
 }
 
 const publications: Publication[] = [
@@ -21,6 +23,7 @@ const publications: Publication[] = [
     journal: 'Nat Commun',
     year: 2024,
     detail: '2024 Oct 23;15(1):9117.',
+    pmid: '39443441',
   },
   {
     authors: 'Maury EA, Jones A, Seplyarskiy V, Nguyen TTL, Rosenbluh C, Bae T, et al.',
@@ -28,6 +31,7 @@ const publications: Publication[] = [
     journal: 'Science',
     year: 2024,
     detail: '2024 Oct 11;386(6718):217-224.',
+    pmid: '39388557',
   },
   {
     authors: 'Garrison MA, Jang Y, Bae T, et al.',
@@ -78,6 +82,7 @@ const publications: Publication[] = [
     year: 2022,
     detail: '2022 Jul 29;377(6605):511-517.',
     highlight: true,
+    pmid: '35901155',
   },
   {
     authors: 'Sarangi V, Jang Y, Suvakov M, Bae T, et al.',
@@ -93,6 +98,7 @@ const publications: Publication[] = [
     year: 2021,
     detail: '2021 Mar 29;22(1):92.',
     highlight: true,
+    pmid: '33781307',
   },
   {
     authors: 'Fasching L, Jang Y, Tomasi S, Schreiner J, Tomasini L, Brady M, Bae T, Sarangi V, Vasmatzis N, Wang Y, Szekely A, Fernandez TV, Leckman JF, Abyzov A, Vaccarino FM.',
@@ -136,6 +142,7 @@ const publications: Publication[] = [
     year: 2018,
     detail: '2018 Feb 2;359(6375):550.',
     highlight: true,
+    pmid: '29217587',
   },
   {
     authors: 'Kim M, Druliner BR, Vasmatzis N, Bae T, Chia N, Abyzov A, & Boardman LA.',
@@ -306,10 +313,25 @@ export default function PublicationPage() {
                       )}
                       <p className="font-semibold text-foreground leading-snug">{pub.title}</p>
                       <p className="text-sm text-muted mt-1.5">{boldPI(pub.authors)}</p>
-                      <p className="text-sm mt-1">
-                        <span className="font-medium text-crimson italic">{pub.journal}</span>
-                        <span className="text-muted"> {pub.detail}</span>
-                      </p>
+                      <div className="flex items-center gap-3 mt-1 flex-wrap">
+                        <p className="text-sm">
+                          <span className="font-medium text-crimson italic">{pub.journal}</span>
+                          <span className="text-muted"> {pub.detail}</span>
+                        </p>
+                        {pub.pmid && (
+                          <a
+                            href={`https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-medium text-muted hover:text-crimson bg-surface px-2 py-0.5 rounded-full border border-border hover:border-crimson/20 transition-colors"
+                          >
+                            PubMed
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>

@@ -44,10 +44,44 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-crimson min-h-[85vh] flex items-center">
-        {/* Background */}
+        {/* Background with abstract DNA/mosaic pattern */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.06]" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/[0.07] to-transparent" />
+          {/* Abstract mosaic grid */}
+          <svg className="absolute right-0 top-0 h-full w-1/2 opacity-[0.04]" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Vertical helix-like curves */}
+            <path d="M200 0 Q260 75 200 150 Q140 225 200 300 Q260 375 200 450 Q140 525 200 600" stroke="white" strokeWidth="1.5" />
+            <path d="M240 0 Q180 75 240 150 Q300 225 240 300 Q180 375 240 450 Q300 525 240 600" stroke="white" strokeWidth="1" />
+            {/* Horizontal connection lines */}
+            <line x1="200" y1="75" x2="240" y2="75" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="150" x2="240" y2="150" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="225" x2="240" y2="225" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="300" x2="240" y2="300" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="375" x2="240" y2="375" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="450" x2="240" y2="450" stroke="white" strokeWidth="0.8" />
+            <line x1="200" y1="525" x2="240" y2="525" stroke="white" strokeWidth="0.8" />
+            {/* Mosaic tiles scattered */}
+            <rect x="80" y="100" width="24" height="24" rx="4" stroke="white" strokeWidth="0.5" opacity="0.6" />
+            <rect x="320" y="180" width="18" height="18" rx="3" stroke="white" strokeWidth="0.5" opacity="0.4" />
+            <rect x="60" y="300" width="16" height="16" rx="3" stroke="white" strokeWidth="0.5" opacity="0.5" />
+            <rect x="340" y="400" width="22" height="22" rx="4" stroke="white" strokeWidth="0.5" opacity="0.3" />
+            <rect x="100" y="480" width="20" height="20" rx="3" stroke="white" strokeWidth="0.5" opacity="0.4" />
+            {/* Data nodes */}
+            <circle cx="200" cy="75" r="3" fill="white" opacity="0.6" />
+            <circle cx="240" cy="150" r="2.5" fill="white" opacity="0.5" />
+            <circle cx="200" cy="300" r="3.5" fill="white" opacity="0.7" />
+            <circle cx="240" cy="375" r="2" fill="white" opacity="0.4" />
+            <circle cx="200" cy="525" r="3" fill="white" opacity="0.5" />
+            {/* Scattered dots — genomic data feel */}
+            <circle cx="120" cy="50" r="1.5" fill="white" opacity="0.3" />
+            <circle cx="310" cy="120" r="1" fill="white" opacity="0.25" />
+            <circle cx="150" cy="200" r="1.5" fill="white" opacity="0.2" />
+            <circle cx="350" cy="280" r="1" fill="white" opacity="0.3" />
+            <circle cx="90" cy="380" r="1.5" fill="white" opacity="0.2" />
+            <circle cx="280" cy="500" r="1" fill="white" opacity="0.25" />
+            <circle cx="160" cy="550" r="1.5" fill="white" opacity="0.3" />
+          </svg>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
