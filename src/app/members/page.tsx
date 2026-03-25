@@ -1,0 +1,205 @@
+import type { Metadata } from "next";
+import PageSection from "@/components/PageSection";
+
+export const metadata: Metadata = {
+  title: "Members",
+};
+
+export default function MembersPage() {
+  return (
+    <>
+      <section className="bg-crimson relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-1/2 -right-1/4 w-2/3 h-full bg-gradient-to-l from-white/20 to-transparent rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <p className="text-crimson-100 text-sm font-medium uppercase tracking-widest mb-3">Our Team</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Members</h1>
+        </div>
+      </section>
+
+      {/* PI */}
+      <PageSection title="Principal Investigator">
+        <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden">
+          <div className="h-2 bg-gradient-to-r from-crimson to-crimson-light" />
+          <div className="p-8">
+            <div className="flex items-start gap-6">
+              <div className="w-20 h-20 bg-crimson/10 text-crimson rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0">
+                TB
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">Taejeong Bae</h3>
+                <p className="text-crimson font-medium mt-1">Associate Professor</p>
+                <p className="text-muted text-sm mt-1">
+                  School of Biosystems and Biomedical Sciences, College of Health Science, Korea University
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-crimson rounded-full" />
+                  Education
+                </h4>
+                <ul className="space-y-3 text-sm text-muted">
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2014</span>
+                    <span>Ph.D. in Pharmaceutical Bioscience, Seoul National University</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2005</span>
+                    <span>M.S. in Cellular and Developmental Physiology, Korea University</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2003</span>
+                    <span>B.S. in Life Science, Korea University</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-crimson rounded-full" />
+                  Experience
+                </h4>
+                <ul className="space-y-3 text-sm text-muted">
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2024–</span>
+                    <span>Associate Professor, Korea University</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2017–24</span>
+                    <span>Research Associate, Mayo Clinic, Rochester, MN</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground whitespace-nowrap">2014–17</span>
+                    <span>Research Fellow, Mayo Clinic, Rochester, MN</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </PageSection>
+
+      {/* Graduate Students */}
+      <section className="py-16 bg-warm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
+            <span className="w-1 h-8 bg-crimson rounded-full" />
+            Graduate Students
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <MemberCard
+              name="Seoyeon Kim"
+              role="Ph.D Student"
+              details="2025 M.S. in Life Science, Korea University / 2023 B.S. in Life Science, Korea University"
+            />
+            <MemberCard
+              name="Minje Sung"
+              role="MS-Ph.D Integrated"
+              details="2025 B.S. in Life Science, Kyung Hee University"
+            />
+            <MemberCard
+              name="Yujin Kim"
+              role="MS-Ph.D Integrated"
+              details="2026 B.S. in Life Science, Kyung Hee University"
+            />
+            <MemberCard
+              name="Dongwon Yun"
+              role="Master's Student"
+              details="2025 B.S. in Biological Engineering, Kangwon National University"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Researchers & Interns */}
+      <PageSection title="Researchers & Interns">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <MemberCard
+            name="Ina Jeon"
+            role="Postbac Researcher"
+            details="2023 B.S. in Biosystem and Biomedical Science, Korea University"
+          />
+          <MemberCard
+            name="Jiwon Lee"
+            role="Undergraduate Intern"
+            details="Biosystem and Biomedical Science, Korea University"
+          />
+          <MemberCard
+            name="Jaehyuk Jeon"
+            role="Undergraduate Intern"
+            details="Biosystem and Biomedical Science, Korea University"
+          />
+        </div>
+      </PageSection>
+
+      {/* Administrative */}
+      <section className="py-16 bg-warm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
+            <span className="w-1 h-8 bg-crimson rounded-full" />
+            Administrative Staff
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <MemberCard
+              name="Sungyoung Ahn"
+              role="Administrative Assistant"
+              details="Joint appointment with Professor Jaewoong Lee, Kyuri Lee"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Alumni */}
+      <PageSection title="Alumni">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <MemberCard
+            name="Younghoon Jung"
+            role="Graduate Intern"
+            details="2025.03 ~ 2025.05"
+            alumni
+          />
+          <MemberCard
+            name="EunJoo Shin"
+            role="Administrative Assistant"
+            details="2025.04 ~ 2025.08"
+            alumni
+          />
+        </div>
+      </PageSection>
+    </>
+  );
+}
+
+function MemberCard({
+  name,
+  role,
+  details,
+  alumni = false,
+}: {
+  name: string;
+  role: string;
+  details: string;
+  alumni?: boolean;
+}) {
+  return (
+    <div className={`rounded-xl border p-5 transition-all duration-200 hover:shadow-lg ${
+      alumni
+        ? "bg-white/60 border-border/60"
+        : "bg-white border-border hover:border-crimson/20"
+    }`}>
+      <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-lg font-bold mb-4 ${
+        alumni
+          ? "bg-muted/10 text-muted"
+          : "bg-crimson/10 text-crimson"
+      }`}>
+        {name[0]}
+      </div>
+      <h3 className="font-semibold text-foreground">{name}</h3>
+      <p className={`text-sm font-medium mt-0.5 ${alumni ? "text-muted" : "text-crimson"}`}>{role}</p>
+      <p className="text-xs text-muted mt-2 leading-relaxed">{details}</p>
+    </div>
+  );
+}
