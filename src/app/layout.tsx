@@ -47,6 +47,36 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href={`${prefix}/favicon.png`} />
         <link rel="apple-touch-icon" href={`${prefix}/favicon.png`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ResearchOrganization",
+              name: "MOsAIciSM Lab",
+              alternateName: "Genomic Analysis Laboratory",
+              url: "https://bioz1lee.github.io/lab-portal/",
+              description: "Decoding Somatic Mosaicism with AI and Multi-Omics at Korea University",
+              parentOrganization: {
+                "@type": "CollegeOrUniversity",
+                name: "Korea University",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Seoul",
+                addressCountry: "KR",
+                streetAddress: "Hana Science Hall B, Room 569A",
+              },
+              member: {
+                "@type": "Person",
+                name: "Taejeong Bae",
+                jobTitle: "Associate Professor",
+                sameAs: "https://scholar.google.com/citations?user=dvwtc1kAAAAJ&hl=en",
+              },
+              knowsAbout: ["somatic mosaicism", "somatic mutation", "whole genome sequencing", "multi-omics", "bioinformatics", "foundation model"],
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <Header basePath={prefix} />

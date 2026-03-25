@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bioz1lee.github.io/lab-portal/sitemap.xml

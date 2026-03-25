@@ -1,0 +1,37 @@
+# MOsAIciSM Lab @ Korea University
+
+> Decoding Somatic Mosaicism with AI and Multi-Omics
+
+## About
+The MOsAIciSM Lab is a genomic analysis laboratory led by Prof. Taejeong Bae at Korea University (College of Health Science, School of Biosystems and Biomedical Sciences). The lab studies somatic mutations, mosaicism, multi-omics integration, and applies AI/foundation models to genomics.
+
+## Principal Investigator
+- Name: Taejeong Bae
+- Title: Associate Professor, Korea University
+- Google Scholar: https://scholar.google.com/citations?user=dvwtc1kAAAAJ&hl=en
+- Email: tjbae [at] korea.ac.kr
+- Phone: +82 2-3290-5648
+- Office: Hana Science Hall B, Room 569A
+
+## Research Areas
+1. **Somatic Mosaicism**: Detecting somatic mutations in brain, lung, and urine using single-cell and whole-genome sequencing.
+2. **Multi-Omics**: Integrating genomic, transcriptomic, epigenomic, and proteomic data to study developmental senescence and Parkinson's disease.
+3. **Bio-AI**: Foundation models for single-cell analysis, genomic variant effect prediction, and druggable peptide design.
+
+## Key Publications
+- Bae T* et al. "Analysis of somatic mutations in 131 human brains reveals aging-associated hypermutability." Science (2022)
+- Wang Y*, Bae T* et al. "Comprehensive identification of somatic nucleotide variants in human brain tissue." Genome Biol (2021)
+- Bae T et al. "Different mutational rates and mechanisms in human cells at pregastrulation and neurogenesis." Science (2018)
+- Jang Y, Tomasini L, Bae T et al. "Transgenerational transmission of post-zygotic mutations suggests symmetric contribution of first two blastomeres to human germline." Nat Commun (2024)
+- Fasching L, Jang Y, ..., Bae T et al. "Early developmental asymmetries in cell lineage trees in living individuals." Science (2021)
+
+Total: 31 peer-reviewed publications.
+
+## Location
+Korea University, Hana Science Hall B, Room 569A, Seoul, South Korea
+
+## Website
+https://bioz1lee.github.io/lab-portal/
+
+## Joining the Lab
+The lab accepts undergraduate interns, master's, and Ph.D. students. Contact Prof. Bae via email.
