@@ -3,11 +3,11 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #1a1a1a;
-  --color-crimson: #8B0029;
-  --color-crimson-dark: #6B0020;
-  --color-crimson-light: #A8103F;
-  --color-crimson-50: #fdf2f4;
-  --color-crimson-100: #fce4e9;
+  --color-crimson: #6B2142;
+  --color-crimson-dark: #4E1730;
+  --color-crimson-light: #7E2E52;
+  --color-crimson-50: #faf4f6;
+  --color-crimson-100: #f2e4ea;
   --color-warm: #f8f6f4;
   --color-accent: #c9102f;
   --color-ivory: #d4c5a0;
