@@ -99,14 +99,14 @@ export default function MembersPage() {
             />
             <MemberCard
               name="Minje Sung"
-              role="MS-Ph.D Integrated"
+              role="MS-Ph.D Integrated Student"
               education={[
                 { degree: "B.S.", field: "Life Science", school: "Kyung Hee University", year: "2025" },
               ]}
             />
             <MemberCard
               name="Yujin Kim"
-              role="MS-Ph.D Integrated"
+              role="MS-Ph.D Integrated Student"
               education={[
                 { degree: "B.S.", field: "Life Science", school: "Kyung Hee University", year: "2026" },
               ]}
