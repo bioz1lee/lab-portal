@@ -7,10 +7,10 @@ import { useState, useEffect } from "react";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/research", label: "Research" },
-  { href: "/publication", label: "Publication" },
+  { href: "/publication", label: "Publications" },
   { href: "/members", label: "Members" },
   { href: "/join", label: "Join Us" },
-  { href: "/event", label: "Event" },
+  { href: "/event", label: "News & Events" },
 ];
 
 export default function Header({ basePath = "" }: { basePath?: string }) {

@@ -21,9 +21,16 @@ export const metadata: Metadata = {
     template: "%s | MOsAIciSM Lab @ KU",
   },
   description:
-    "MOsAIciSM Lab at Korea University - Decoding Somatic Mosaicism with AI and Multi-Omics.",
+    "MOsAIciSM Lab at Korea University — Decoding Somatic Mosaicism with AI and Multi-Omics. Research in somatic mutations, genomic mosaicism, multi-omics, and bio-AI.",
+  keywords: ["somatic mosaicism", "genomic analysis", "Korea University", "Taejeong Bae", "bioinformatics", "multi-omics", "foundation model", "somatic mutation", "MOsAIciSM"],
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    title: "MOsAIciSM Lab @ Korea University",
+    description: "Decoding Somatic Mosaicism with AI and Multi-Omics",
+    type: "website",
+    locale: "en_US",
   },
 };
 

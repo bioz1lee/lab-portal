@@ -18,6 +18,8 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
               School of Biosystems and Biomedical Sciences
               <br />
               College of Health Science, Korea University
+              <br />
+              하나과학관 B동 569A호
             </p>
           </div>
           <div>
@@ -43,11 +45,15 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
             <div className="text-sm mt-2 space-y-1">
               <p>Tel: +82 2-3290-5648</p>
               <p>Email: <ObfuscatedEmail user="tjbae" domain="korea.ac.kr" className="text-white/80" /></p>
+              <p>Office: 하나과학관 B동 569A호</p>
+            </div>
+            <div className="flex gap-3 mt-3">
+              <a href="https://scholar.google.com/citations?user=dvwtc1kAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-xs text-white/50 hover:text-white transition-colors">Google Scholar</a>
             </div>
           </div>
         </div>
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs">
-          &copy; {new Date().getFullYear()} MOsAIciSM Lab @ Korea University. All rights reserved.
+          &copy; 2024&ndash;{new Date().getFullYear()} MOsAIciSM Lab @ Korea University. All rights reserved.
         </div>
       </div>
     </footer>

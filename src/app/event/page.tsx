@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageSection from "@/components/PageSection";
+import { newsItems } from "@/data/news";
 
 export const metadata: Metadata = {
   title: "News & Events",
@@ -10,20 +11,7 @@ const events = [
     date: "May, 2025",
     title: "First Teacher's Day",
     description: "The lab celebrated its first Teacher's Day together.",
-    type: "event" as const,
   },
-];
-
-const news = [
-  { date: "March, 2026", text: "Minje Sung, Yujin Kim started their MS-Ph.D integrated program." },
-  { date: "December, 2025", text: "Jaehyuk Jeon joined the lab as student intern. Welcome!" },
-  { date: "November, 2025", text: "Ina Jeon joined the lab as incoming Master's student. Welcome!" },
-  { date: "September, 2025", text: "Seoyeon Kim started her Ph.D program. Dongwon Yun started his Master's program." },
-  { date: "July, 2025", text: "YuJin Kim joined the lab as student intern. Welcome!" },
-  { date: "March, 2025", text: "Seoyeon Kim joined the lab as an incoming Ph.D student. Welcome!" },
-  { date: "March, 2025", text: "Dongwon Yun, Minje Sung joined the lab as an incoming master's student. Welcome!" },
-  { date: "November, 2024", text: "Jiwon Lee joined the Lab as student intern. Welcome!" },
-  { date: "September, 2024", text: "The Genomic Analysis Lab opened." },
 ];
 
 export default function EventPage() {
@@ -59,7 +47,7 @@ export default function EventPage() {
 
       <PageSection title="News">
         <div className="space-y-0">
-          {news.map((item, i) => (
+          {newsItems.map((item, i) => (
             <div
               key={i}
               className="group flex flex-col sm:flex-row gap-1 sm:gap-6 items-start sm:items-baseline py-4 border-b border-border last:border-0 hover:bg-warm/50 -mx-4 px-4 rounded-lg transition-colors"
