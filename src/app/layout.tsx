@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "MOsAIciSM Lab at Korea University - Decoding Somatic Mosaicism with AI and Multi-Omics.",
   icons: {
-    icon: `${prefix}/favicon.svg`,
+    icon: "/favicon.svg",
   },
 };
 
