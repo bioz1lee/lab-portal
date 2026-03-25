@@ -65,7 +65,7 @@ export default function ResearchPage() {
   return (
     <>
       <section className="bg-crimson relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-teal/[0.08]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.08]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-3">What We Do</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Research</h1>

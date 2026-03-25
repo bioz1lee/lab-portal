@@ -46,7 +46,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-crimson min-h-[85vh] flex items-center">
         {/* Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-teal/[0.06]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-crimson-dark/40 via-transparent to-ivory/[0.06]" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/[0.07] to-transparent" />
         </div>
 
@@ -61,12 +61,12 @@ export default function Home() {
               </div>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
-                M<span className="text-teal-light">O</span>s<span className="text-teal-light">AI</span>ci<span className="text-teal-light">S</span>M
+                M<span className="text-ivory-light">O</span>s<span className="text-ivory-light">AI</span>ci<span className="text-ivory-light">S</span>M
               </h1>
               <p className="mt-5 text-xl sm:text-2xl text-white/50 font-light leading-relaxed">
                 Decoding Somatic Mosaicism
                 <br />
-                with <span className="text-teal-light font-normal">AI</span> and <span className="text-teal-light font-normal">Multi-Omics</span>
+                with <span className="text-ivory-light font-normal">AI</span> and <span className="text-ivory-light font-normal">Multi-Omics</span>
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -115,8 +115,8 @@ export default function Home() {
                     className="group flex items-center gap-4 bg-white/[0.06] backdrop-blur-sm border border-white/[0.06] rounded-xl px-5 py-4 hover:bg-white/[0.1] hover:border-white/[0.12] transition-all duration-300"
                   >
                     <span className="text-[11px] font-bold text-white/20 tracking-widest w-6 shrink-0">0{i + 1}</span>
-                    <div className="w-9 h-9 bg-white/[0.08] rounded-lg flex items-center justify-center shrink-0 group-hover:bg-teal/20 transition-colors">
-                      <svg className="w-4 h-4 text-white/50 group-hover:text-teal-light transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <div className="w-9 h-9 bg-white/[0.08] rounded-lg flex items-center justify-center shrink-0 group-hover:bg-ivory/20 transition-colors">
+                      <svg className="w-4 h-4 text-white/50 group-hover:text-ivory-light transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                       </svg>
                     </div>
@@ -245,7 +245,7 @@ export default function Home() {
                 href={item.link}
                 className="group relative bg-white rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:border-transparent transition-all duration-500"
               >
-                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-crimson to-teal scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-crimson to-ivory scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 <div className="p-7">
                   <div className="flex items-center justify-between mb-5">
                     <div className="w-12 h-12 bg-crimson/10 text-crimson rounded-xl flex items-center justify-center group-hover:bg-crimson group-hover:text-white transition-all duration-300">

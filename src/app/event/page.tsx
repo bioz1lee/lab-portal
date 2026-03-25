@@ -33,7 +33,7 @@ export default function EventPage() {
               key={i}
               className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-crimson/20"
             >
-              <div className="h-1.5 bg-gradient-to-r from-crimson to-teal" />
+              <div className="h-1.5 bg-gradient-to-r from-crimson to-ivory" />
               <div className="p-6">
                 <span className="inline-block text-xs font-bold uppercase tracking-wider text-crimson bg-crimson/10 px-3 py-1 rounded-lg mb-3">
                   {event.date}

@@ -53,7 +53,7 @@ export default function Header({ basePath = "" }: { basePath?: string }) {
               >
                 {item.label}
                 {pathname === item.href && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-teal-light rounded-full" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-ivory-light rounded-full" />
                 )}
               </Link>
             ))}

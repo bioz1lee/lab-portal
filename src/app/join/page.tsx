@@ -26,7 +26,7 @@ export default function JoinPage() {
         </p>
 
         <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden">
-          <div className="h-1.5 bg-gradient-to-r from-crimson to-teal" />
+          <div className="h-1.5 bg-gradient-to-r from-crimson to-ivory" />
           <div className="p-8">
             <h3 className="font-bold text-foreground text-lg mb-6">
               We are seeking highly motivated individuals who:
