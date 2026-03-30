@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     template: "%s | MOsAIciSM Lab @ KU",
   },
   description:
-    "MOsAIciSM Lab at Korea University — Decoding Somatic Mosaicism with AI and Multi-Omics. Research in somatic mutations, genomic mosaicism, multi-omics, and bio-AI.",
-  keywords: ["somatic mosaicism", "genomic analysis", "Korea University", "Taejeong Bae", "bioinformatics", "multi-omics", "foundation model", "somatic mutation", "MOsAIciSM"],
+    "MOsAIciSM Lab at Korea University (고려대학교 배태정 연구실) — Decoding Somatic Mosaicism with AI and Multi-Omics. 체세포 모자이시즘, 멀티오믹스, 생물정보학 연구.",
+  keywords: ["somatic mosaicism", "genomic analysis", "Korea University", "Taejeong Bae", "bioinformatics", "multi-omics", "foundation model", "somatic mutation", "MOsAIciSM", "고려대학교", "배태정", "체세포 모자이시즘", "체세포 돌연변이", "생물정보학", "멀티오믹스", "고려대 연구실"],
   icons: {
     icon: "/favicon.png",
   },
