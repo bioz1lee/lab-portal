@@ -45,6 +45,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="0F1UCQwJ6IPcdXh_mJYtOt85lg0CU_1koCdxe4th0hE" />
         <link rel="icon" type="image/png" href={`${prefix}/favicon.png`} />
         <link rel="apple-touch-icon" href={`${prefix}/favicon.png`} />
         <script
