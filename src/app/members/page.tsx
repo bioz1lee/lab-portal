@@ -18,9 +18,11 @@ export default function MembersPage() {
           <div className="h-2 bg-gradient-to-r from-crimson to-crimson-light" />
           <div className="p-8">
             <div className="flex items-start gap-6">
-              <div className="w-20 h-20 bg-crimson/10 text-crimson rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0">
-                TB
-              </div>
+              <img
+                src="/pi-photo.jpg"
+                alt="Taejeong Bae"
+                className="w-20 h-20 rounded-2xl object-cover shrink-0"
+              />
               <div>
                 <h3 className="text-2xl font-bold text-foreground">Taejeong Bae</h3>
                 <p className="text-crimson font-medium mt-1">Associate Professor</p>

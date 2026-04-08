@@ -26,9 +26,9 @@ export default function ResearchPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
-                  { organ: "Brain", icon: "🧠", desc: "Developing computational pipelines to detect and characterize somatic variants from high-depth WGS/WES data, and integrating single-cell multiomics to interpret their functional impact at the cell-type level. We also construct comprehensive brain cell atlases using scRNA-seq and spatial transcriptomics to map cellular heterogeneity and intercellular communication pathways." },
-                  { organ: "Lung", icon: "🫁", desc: "Performing whole-exome sequencing analysis for rare disease gene discovery in pulmonary arterial hypertension cohorts, complemented by bulk and single-cell RNA-seq transcriptomic analyses to uncover hidden genetic causes in congenital lung disease." },
-                  { organ: "Urine", icon: "🔬", desc: "Building prognostic models for organ transplantation outcomes using transcriptomic data and single-cell foundation models, connecting genomic variant analysis with clinically meaningful applications for kidney transplant monitoring." },
+                  { organ: "Brain", icon: "🧠", desc: "Detecting somatic variants from high-depth WGS/WES and mapping brain cellular heterogeneity through scRNA-seq and spatial transcriptomics." },
+                  { organ: "Lung", icon: "🫁", desc: "Discovering rare disease genes via whole-exome sequencing in pulmonary hypertension cohorts, supported by bulk and single-cell transcriptomic analyses." },
+                  { organ: "Urine", icon: "🔬", desc: "Building prognostic models for kidney transplant outcomes by integrating transcriptomic data with single-cell foundation models." },
                 ].map((item) => (
                   <div key={item.organ} className="bg-warm rounded-xl p-5 border border-border/50">
                     <div className="flex items-center gap-2 mb-2">
@@ -54,8 +54,8 @@ export default function ResearchPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { label: "Developmental Senescence", desc: "Decoding human developmental senescence through high-resolution multi-omics integration. Using hESCs as a model system, we leverage scATAC-seq to explore chromatin accessibility changes that trigger senescence, and combine these with scRNA-seq to build integrated gene regulatory networks revealing epigenome\u2013transcriptome cross-talk governing cellular identity and fate." },
-                  { label: "Parkinson's Disease", desc: "Uncovering somatic mutation contributions to neurodegeneration." },
+                  { label: "Developmental Senescence", desc: "Exploring how chromatin accessibility changes trigger senescence in hESCs using scATAC-seq, combined with scRNA-seq to build gene regulatory networks that reveal epigenome\u2013transcriptome cross-talk." },
+                  { label: "Parkinson's Disease", desc: "Investigating how somatic mutations accumulate in the aging brain and contribute to neurodegeneration, using multi-omics approaches to trace mutation\u2013phenotype relationships." },
                 ].map((item) => (
                   <div key={item.label} className="bg-warm rounded-xl p-5 border border-border/50">
                     <h4 className="font-semibold text-foreground mb-1">{item.label}</h4>
@@ -87,15 +87,15 @@ export default function ResearchPage() {
                   <tbody className="divide-y divide-border/50">
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Single Cell FM</td>
-                      <td className="px-5 py-3 text-muted">Developing prognostic prediction models for transplant recipients by combining single-cell foundation models with transcriptomic data and DNA variant calling for gene&ndash;disease association modeling</td>
+                      <td className="px-5 py-3 text-muted">Prognostic prediction for transplant recipients using scFM and transcriptomic data</td>
                     </tr>
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Genomic FM</td>
-                      <td className="px-5 py-3 text-muted">Variant effect prediction</td>
+                      <td className="px-5 py-3 text-muted">Predicting functional impact of genetic variants through large-scale genomic language models</td>
                     </tr>
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Structure Prediction</td>
-                      <td className="px-5 py-3 text-muted">Discovering novel receptor-binding proteins using generative models (RFdiffusion, AlphaFold3) with an integrated filtering pipeline for evaluating structural and biophysical viability of designed candidates</td>
+                      <td className="px-5 py-3 text-muted">Designing novel receptor-binding proteins with RFdiffusion and AlphaFold3, validated through structural filtering pipelines</td>
                     </tr>
                   </tbody>
                 </table>
