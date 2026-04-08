@@ -26,9 +26,9 @@ export default function ResearchPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
-                  { organ: "Brain", icon: "🧠", desc: "Finding cellular origin of hypermutable brain tissues." },
-                  { organ: "Lung", icon: "🫁", desc: "Exploring hidden genetic causes in congenital lung disease." },
-                  { organ: "Urine", icon: "🔬", desc: "Monitoring kidney transplant patients." },
+                  { organ: "Brain", icon: "🧠", desc: "Developing computational pipelines to detect and characterize somatic variants from high-depth WGS/WES data, and integrating single-cell multiomics to interpret their functional impact at the cell-type level. We also construct comprehensive brain cell atlases using scRNA-seq and spatial transcriptomics to map cellular heterogeneity and intercellular communication pathways." },
+                  { organ: "Lung", icon: "🫁", desc: "Performing whole-exome sequencing analysis for rare disease gene discovery in pulmonary arterial hypertension cohorts, complemented by bulk and single-cell RNA-seq transcriptomic analyses to uncover hidden genetic causes in congenital lung disease." },
+                  { organ: "Urine", icon: "🔬", desc: "Building prognostic models for organ transplantation outcomes using transcriptomic data and single-cell foundation models, connecting genomic variant analysis with clinically meaningful applications for kidney transplant monitoring." },
                 ].map((item) => (
                   <div key={item.organ} className="bg-warm rounded-xl p-5 border border-border/50">
                     <div className="flex items-center gap-2 mb-2">
@@ -54,7 +54,7 @@ export default function ResearchPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { label: "Developmental Senescence", desc: "Investigating cellular aging mechanisms during early development." },
+                  { label: "Developmental Senescence", desc: "Decoding human developmental senescence through high-resolution multi-omics integration. Using hESCs as a model system, we leverage scATAC-seq to explore chromatin accessibility changes that trigger senescence, and combine these with scRNA-seq to build integrated gene regulatory networks revealing epigenome\u2013transcriptome cross-talk governing cellular identity and fate." },
                   { label: "Parkinson's Disease", desc: "Uncovering somatic mutation contributions to neurodegeneration." },
                 ].map((item) => (
                   <div key={item.label} className="bg-warm rounded-xl p-5 border border-border/50">
@@ -87,7 +87,7 @@ export default function ResearchPage() {
                   <tbody className="divide-y divide-border/50">
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Single Cell FM</td>
-                      <td className="px-5 py-3 text-muted">Prognostic prediction for transplant recipients using scFM</td>
+                      <td className="px-5 py-3 text-muted">Developing prognostic prediction models for transplant recipients by combining single-cell foundation models with transcriptomic data and DNA variant calling for gene&ndash;disease association modeling</td>
                     </tr>
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Genomic FM</td>
@@ -95,7 +95,7 @@ export default function ResearchPage() {
                     </tr>
                     <tr className="hover:bg-warm/50 transition-colors">
                       <td className="px-5 py-3 font-medium text-foreground">Structure Prediction</td>
-                      <td className="px-5 py-3 text-muted">New druggable peptide design</td>
+                      <td className="px-5 py-3 text-muted">Discovering novel receptor-binding proteins using generative models (RFdiffusion, AlphaFold3) with an integrated filtering pipeline for evaluating structural and biophysical viability of designed candidates</td>
                     </tr>
                   </tbody>
                 </table>
