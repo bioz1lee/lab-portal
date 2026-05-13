@@ -21,6 +21,9 @@ export default function Footer({ basePath = "" }: { basePath?: string }) {
               <br />
               Hana Science Hall B, Room 569A
             </p>
+            <p className="text-xs leading-relaxed mt-2 text-white/40">
+              고려대학교 인간유전체분석 연구실
+            </p>
           </div>
           <div>
             <h3 className="font-semibold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h3>

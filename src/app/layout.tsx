@@ -55,9 +55,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ResearchOrganization",
               name: "MOsAIciSM Lab",
-              alternateName: "Genomic Analysis Laboratory",
+              alternateName: ["Genomic Analysis Laboratory", "인간유전체분석 연구실", "고려대학교 배태정 연구실"],
               url: "https://baelab.org/",
               description: "Decoding Somatic Mosaicism with AI and Multi-Omics at Korea University",
+              disambiguatingDescription: "고려대학교 인간유전체분석 연구실. 생물정보학 및 전장유전체 분석 연구. 체세포 모자이시즘, 멀티오믹스, AI 유전체 분석.",
               parentOrganization: {
                 "@type": "CollegeOrUniversity",
                 name: "Korea University",
