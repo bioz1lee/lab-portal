@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
 import PageSection from "@/components/PageSection";
+import EventsClient from "@/components/EventsClient";
 import { newsItems } from "@/data/news";
 
 export const metadata: Metadata = {
   title: "News & Events",
 };
-
-const events = [
-  {
-    date: "May, 2025",
-    title: "First Teacher's Day",
-    description: "The lab celebrated its first Teacher's Day together.",
-  },
-];
 
 export default function EventPage() {
   return (
@@ -26,23 +19,7 @@ export default function EventPage() {
       </section>
 
       <PageSection title="Events">
-        <div className="space-y-6">
-          {events.map((event, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-crimson/20"
-            >
-              <div className="h-1.5 bg-gradient-to-r from-crimson to-ivory" />
-              <div className="p-6">
-                <span className="inline-block text-xs font-bold uppercase tracking-wider text-crimson bg-crimson/10 px-3 py-1 rounded-lg mb-3">
-                  {event.date}
-                </span>
-                <h3 className="text-xl font-bold text-foreground">{event.title}</h3>
-                <p className="text-muted mt-2">{event.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <EventsClient />
       </PageSection>
 
       <PageSection title="News">
