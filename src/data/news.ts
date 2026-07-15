@@ -1,4 +1,5 @@
 export const newsItems = [
+  { date: "July, 2026", text: "Seog Hwangbo joined the lab as student intern. Welcome!" },
   { date: "March, 2026", text: "Minje Sung, Yujin Kim started their MS-Ph.D integrated program." },
   { date: "December, 2025", text: "Jaehyuk Jeon joined the lab as student intern. Welcome!" },
   { date: "November, 2025", text: "Ina Jeon joined the lab as Postbac Researcher. Welcome!" },

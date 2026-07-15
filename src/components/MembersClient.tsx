@@ -211,7 +211,7 @@ export default function MembersClient() {
               onOpenModal={setActiveResearch}
             />
             <MemberCard
-              name="Jaehyuk Jeon"
+              name="Seog Hwangbo"
               role="Undergraduate Intern"
               education={[
                 { field: "Biosystem and Biomedical Science", school: "Korea University" },
@@ -246,6 +246,12 @@ export default function MembersClient() {
             Alumni
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <MemberCard
+              name="Jaehyuk Jeon"
+              role="Undergraduate Intern"
+              note="2025.12 – 2026.06"
+              alumni
+            />
             <MemberCard
               name="Younghoon Jung"
               role="Graduate Intern"
